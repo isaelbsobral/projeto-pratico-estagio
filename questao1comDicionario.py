@@ -9,9 +9,9 @@ def getMetas(urlArgumento):
 
     try: #Vai tentar fazer a conexão com a página WEB
         paginaWeb = requests.get(urlArgumento) #Aqui o método está fazendo a leitra da URL recebida e armazenando em variável.
-        paginaWeb.raise_for_status() #Se a requisição da página foi feita com sucesso ele não entra nas executa as exceções.
+        paginaWeb.raise_for_status() #Se a requisição da página foi feita com sucesso ele não entra, mas executa as exceções.
 
-    except HTTPError as erroHTTP: #Se não houve sucesso na requisição ele executa e exibi o erro.
+    except HTTPError as erroHTTP: #Se não houve sucesso na requisição ele executa e exibe o erro.
         print("")
         print(f'Um erro de requisição HTTP ocorreu:\n{erroHTTP}')
         print("Tente novamente!")
